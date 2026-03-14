@@ -26,25 +26,25 @@ A única dependência necessária é:
 
 ## Instalação e Execução
 
-**1. **Clone o repositório:
+**1.** Clone o repositório:
 ```bash
 git clone git@github.com:victor1cs/hltv_api_study.git
 cd hltv_api_study
 ```
 
-**2. **Construa as imagens Docker:
+**2.** Construa as imagens Docker:
 ```bash
 docker-compose build
 ```
 
-**3. **Configure o banco de dados (criar, migrar e popular):
+**3.** Configure o banco de dados (criar, migrar e popular):
 ```bash
 docker-compose run web bash rails db:create db:migrate db:seed
 ```
 **Obs:** O seed é populado com base no arquivo json `db/data/teams.json` 
 Arquivo da internet disponibilizado pelo link: https://hltv-api.vercel.app/api/player.json
 
-**4. **Inicie os serviços:
+**4.** Inicie os serviços:
 ```bash
 docker-compose up
 ```
