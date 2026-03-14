@@ -10,6 +10,8 @@ Rails.application.routes.draw do
       resources :teams, only: [:index, :show], param: :name do
         get :players, on: :member, to: "teams#players"
       end
+
+      resources :players, only: [:index, :show], param: :nickname
     end
   end
 end

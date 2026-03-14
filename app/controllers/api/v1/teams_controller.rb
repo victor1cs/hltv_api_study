@@ -13,7 +13,7 @@ module Api
       end
 
       def players
-        render json: @team.players, status: :ok
+        render json: @team.players, each_serializer: TeamPlayerSerializer, status: :ok
       end
 
       private
