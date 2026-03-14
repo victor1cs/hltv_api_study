@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  username: postgres
+  password: password
+  pool: 5
+
+development:
+  <<: *default
+  database: hltv_api_study_development
+
+test:
+  <<: *default
+  database: hltv_api_study_test
+
+production:
+  <<: *default
+  database: hltv_api_study_production
