@@ -76,19 +76,19 @@ Resposta:
         "id": 3,
         "name": "Liquid",
         "ranking": 3,
-        "logo": "logo": "https://..."
+        "logo": "https://..."
     },
     {
         "id": 4,
         "name": "Natus Vincere",
         "ranking": 4,
-        "logo": "logo": "https://..."
+        "logo": "https://..."
     },
     {
         "id": 5,
         "name": "G2",
         "ranking": 5,
-        "logo": "logo": "https://..."
+        "logo": "https://..."
     }
 ]
 ```
