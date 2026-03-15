@@ -21,7 +21,10 @@ module Api
         if result[:success]
           render json: result[:team], status: :created
         else
-          render json: { error: result[:message] }, status: :unprocessable_entity
+          render json: {
+            error: result[:error],
+            details: result[:details]
+          }, status: :unprocessable_entity
         end
       end
 

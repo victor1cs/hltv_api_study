@@ -45,11 +45,11 @@ module Teams
       def self.handle_error(error)
         record = error.record
 
-        if record.is_a?(Player) && record.errors[:nickname].present?
-          return error("Nickname '#{record.nickname}' has already been taken")
-        end
-
-        error(record.errors.full_messages.to_sentence)
+        {
+          success: false,
+          error: "Validation failed",
+          details: record.errors.messages
+        }
       end
 
       def self.success(team)
