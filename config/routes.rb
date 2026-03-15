@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :teams, only: [:index, :show], param: :name do
+      resources :teams, only: [:index, :show, :create], param: :name do
         get :players, on: :member, to: "teams#players"
       end
 
