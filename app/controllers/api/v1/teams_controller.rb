@@ -13,7 +13,10 @@ module Api
       end
 
       def create
-        result = ::Teams::Create::TeamService.call(permitted_params[:name])
+        result = ::Teams::Create::TeamService.call(
+          permitted_params[:name],
+          permitted_params[:players]
+        )
 
         if result[:success]
           render json: result[:team], status: :created
@@ -29,7 +32,7 @@ module Api
       private
 
       def permitted_params
-        params.permit(:name)
+        params.permit(:name, players: [:nickname, :name, :country_name])
       end
 
       def set_team
